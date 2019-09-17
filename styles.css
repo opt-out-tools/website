@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+/* =============================================================================
+   App specific CSS file.
+   ========================================================================== */
+
+/* universal */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('assets/fonts/montserrat/Montserrat-Regular.ttf') format("truetype");
+  font-weight:400;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('assets/fonts/ubuntu-font-family-0.80/Ubuntu-R.ttf') format("truetype");
+  font-weight:400;
+}
+
+html {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: both;
+}
+
+body {
+  height: 100%;
+  background: #FFFFFF;
+  margin: 0;
+}
+
+main {
+  min-height: calc(100vh - 105px - 129px - 48px);
+}
+
+footer {
+  margin: auto;
+}
+
+footer img {
+  padding: 22px 29px;
+}
+
+
+
+

@@ -1,0 +1,42 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<nav class="site-navigation" *ngIf="router.url !== '/report'">
+  <ul>
+    <li class="dropdown">
+      <a href="/"><button class="dropbtn">Home</button></a>
+
+    </li>
+    <li class="dropdown">
+      <button class="dropbtn">About Us</button>
+      <ul class="dropdown-content">
+        <li class="who"> <a routerLink="/who" routerLinkActive="active">Who we are</a> </li>
+        <li class="why"> <a routerLink="/why" routerLinkActive="active">Why we are</a> </li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <button class="dropbtn">Our Work</button>
+      <ul class="dropdown-content">
+        <li class="community"> <a routerLink="/community" routerLinkActive="active">Our Community</a> </li>
+        <li class="research"> <a routerLink="/research" routerLinkActive="active">Our Research</a> </li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <button class="dropbtn">Resources</button>
+      <ul class="dropdown-content">
+        <li class="laws"> <a routerLink="/laws" routerLinkActive="active">Laws</a> </li>
+        <li class="studies"> <a routerLink="/studies" routerLinkActive="active">Studies and Reports</a> </li>
+      </ul>
+    </li>
+  </ul>
+  <hr class="ruler"/>
+</nav>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+
+<footer *ngIf="router.url !== '/report'">
+  <img src="../assets/img/logo.svg" alt="">
+</footer>
+
+
