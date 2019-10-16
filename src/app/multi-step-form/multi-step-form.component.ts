@@ -36,7 +36,6 @@ export class MultiStepFormComponent implements OnInit, AfterContentInit {
   }
 
   ngOnInit() {
-    console.log(this.formData[this.step]);
   }
   renderForm() {
     this.currentView = this.divs.toArray()[this.step];

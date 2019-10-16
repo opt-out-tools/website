@@ -1,31 +1,20 @@
 nav {
-  position: relative;
+  position: fixed;
+  top: 5px;
   width: 100%;
-  height: 82px;
-  border-bottom: 23px solid #03DCC9;
+  height: 26px;
   background-color: #FFFFFF;
 }
-
-.ruler {
-  margin: 0;
-  height: 5px;
-  background-color: red;
-  border:none;
-}
-
 /* Navigation */
 
 .site-navigation {
 
 }
 .site-navigation ul {
-  height: 83px;
   margin:0 auto;
-
   padding:0;
   display:flex;
   flex-flow:row wrap;
-  justify-content:center
 }
 
 .site-navigation li {
@@ -45,14 +34,14 @@ nav {
 }
 .site-navigation .dropbtn {
   border: none;
-  padding:26px;
+  padding:0px 10px;
   color: #0B3954;
   background-color: transparent;
   font-family: Ubuntu, serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 14px;
+  line-height: 25px;
 }
 
 .site-navigation .dropdown {

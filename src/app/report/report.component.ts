@@ -20,20 +20,6 @@ export class ReportComponent {
   constructor(private http: HttpClient) { }
   formData = {
     urls: undefined,
-    /*
-    urls: null,
-    self_submission: null,
-    is_part_of_larger_attack: null,
-    submission_id: null,
-    identify: '',
-    age: '',
-    job: '',
-    experienced: '',
-    perpetrator: '',
-    reaction_type: '',
-    interaction: '',
-    feeling: '',
-     */
     submission: undefined
   };
 
@@ -58,17 +44,6 @@ export class ReportComponent {
       title: 'Now we need to know a little about you. This is so our models can best understand who is suffering what meaning we can ' +
         'protect people better',
       data: {
-        /*
-        submission_id: this.formData.submission_id,
-        identify: this.formData.identify,
-        age: this.formData.age,
-        job: this.formData.job,
-        experienced: this.formData.experienced,
-        perpetrator: this.formData.perpetrator,
-        reaction_type: this.formData.reaction_type,
-        interaction: this.formData.interaction,
-        feeling: this.formData.feeling
-         */
       }
     }
   ];
