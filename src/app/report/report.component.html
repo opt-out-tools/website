@@ -58,10 +58,12 @@
           <div class="form-group">
             <label class="form-label" for="urls"></label>
             <input class="form-input" [ngModel]="" #urls="ngModel" type="text" name="urls" id="urls" required [ngClass]="{'is-error': urls.invalid && (urls.touched || urls.dirty)}">
+            <button class="submit" [disabled]="!f.valid || !f.dirty" (click)="submitHandle(f.value)">Submit</button>
           </div>
+
         </form>
 
-        <button class="submit" [disabled]="!f.valid || !f.dirty" (click)="submitHandle(f.value)">Submit</button>
+
       </div>
     </div>
   </ng-template>
@@ -96,9 +98,9 @@
 
         <form #f="ngForm">
 
-
+          <p>How do you identify yourself?</p>
           <div class="radio-group" >
-            <p>How do you identify yourself?</p>
+
             <label>
               <input type="radio"  value="Female" name="identify" ngModel >
               <span>Female</span>
@@ -124,9 +126,8 @@
             </label>
           </div>
 
-
+          <p>What job do you have?</p>
           <div class="radio-group" >
-            <p>What job do you have?</p>
             <label>
               <input type="radio"  value="some_job" name="job" ngModel >
               some job
@@ -157,8 +158,8 @@
             </label>
           </div>
 
+          <p>Please choose the statement which best describes how you personally interact with Twitter.</p>
           <div class="radio-group" >
-            <p>Please choose the statement which best describes how you personally interact with Twitter.</p>
             <label>
               <input type="radio"  value="post daily to my friends" name="interaction" ngModel >
               post daily to my friends
@@ -181,8 +182,8 @@
             </label>
           </div>
 
+          <p>What action was taken in response to the harassment?</p>
           <div class="radio-group" >
-            <p>What action was taken in response to the harassment?</p>
             <label>
               <input type="radio"  value="some_action" name="experienced" ngModel >
               some action
@@ -213,8 +214,8 @@
             </label>
           </div>
 
+          <p>Were the perpetrator(s) already known to you?</p>
           <div class="radio-group" >
-            <p>Were the perpetrator(s) already known to you?</p>
             <label>
               <input type="radio"  value="person you know" name="perpetrator" ngModel >
               Person you know.
@@ -233,8 +234,8 @@
             </label>
           </div>
 
+          <p>Have you changed your interactions with Twitter as a result of harassment? If yes, in what ways?</p>
           <div class="radio-group" >
-            <p>Have you changed your interactions with Twitter as a result of harassment? If yes, in what ways?</p>
             <label>
               <input type="radio"  value="my behaviour has not changed" name="reaction_type" ngModel >
               My behaviour has not changed.

@@ -1,45 +1,67 @@
-div {
-  display: flex;
-}
-
-p {
-  position: relative;
-  //display: inline-flex;
-  width: 575px;
-  height: 510px;
-  left: 102px;
-  top: 290px;
-  font-family: 'Montserrat', sans-serif;
+div.home{
+  height:calc(100vh - 100px);
+  font-family: 'Helvetica', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
-  line-height: 29px;
-
   color: #2E3532;
+  margin-top: 100px;
+}
+
+div#home-text {
+  display: block;
+  margin: 0 50px;
+  padding: 0 15px;
+  border-left: 2px solid black;
+}
+
+h1,p {
+  position: relative;
+  font-family: 'Helvetica', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: #2E3532;
+}
+h1 {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 600;
+}
+p {
+  font-size: 18px;
+  line-height: 20px;
 }
 
 img {
-  position: absolute;
-  width: 221px;
-  height: 212px;
-  left: 947px;
-  top: 340px;
-  //display: inline-flex;
+  position: relative;
+  padding: 30px 50px 0 50px;
+  width: 250px;
 }
 
-a~p {
-  position: absolute;
-  width: 483px;
-  height: 50.54px;
-  left: 840px;
-  top: 592px;
+div#button-holder {
+  #display: block;
+  margin: 0 50px;
+  padding: 0 30px;
+}
 
-  font-family: 'Montserrat', sans-serif;
+button {
+  #display:flex;
+  padding:20px 35px;
+  opacity: 50%;
+  font-family: 'Helvetica', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
-  line-height: 29px;
+  font-size: 28px;
+  line-height: 28px;
+}
 
-  color: #2E3532;
+button#report_button{
+  background-color: rgba(16, 207, 201, 0.7);
+  border: 8px double black;
+  float:left;
+}
 
+button#share_button {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 8px double darkgoldenrod;
+  float:right;
 }

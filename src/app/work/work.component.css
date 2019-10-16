@@ -1,0 +1,14 @@
+.parent {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+}
+
+@-moz-document url-prefix() {
+  .parent {
+    overflow-y: scroll;
+  }
+}
+
+.child {
+  scroll-snap-align: end;
+}

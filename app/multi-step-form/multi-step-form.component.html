@@ -1,6 +1,0 @@
-<br>
-<br>
-
-<div *ngIf="!!currentView">
-  <ng-content *ngTemplateOutlet="currentView; context: {$implicit: formData[step], nextStepHandle: nextStepHandle, backStepHandle: backStepHandle, submitHandle: submitHandle, finishHandle: finishHandle}"></ng-content>
-</div>
