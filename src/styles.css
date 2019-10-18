@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+/* =============================================================================
+   App specific CSS file.
+   ========================================================================== */
+
+/* universal */
+@font-face {
+  font-family: 'Helvetica';
+  src: url('/assets/fonts/Helvetica Neue LT Std/HelveticaNeueLTStd-Roman.otf') format("truetype");
+  font-weight:400;
+}
+
+@font-face {
+  font-family: 'Helvetica-Bold';
+  src: url('/assets/fonts/Helvetica Neue LT Std/HelveticaNeueLTStd-Bd.otf') format("truetype");
+  font-weight:500;
+}
+
+html {
+  overflow-y: scroll;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: both;
+}
+
+body {
+
+  background: url('/assets/img/OptOutLogo-04.svg') center center repeat-y, linear-gradient(0deg, #F1F1F2, #10CFC9);
+  background-size: contain;
+  margin: 0;
+}
+
+main {
+  min-height: calc(100vh - 105px - 129px - 48px);
+}
+
+footer {
+  margin: auto;
+}
+
+footer img {
+  padding: 22px 29px;
+}
+
+
+
+

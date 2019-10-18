@@ -8,7 +8,8 @@ import {Router} from '@angular/router';
 })
 export class AppComponent {
   title = 'opt-out-tool';
+  routerUrl: string;
   constructor(private router: Router) {
-
+    this.routerUrl = router.url;
   }
 }

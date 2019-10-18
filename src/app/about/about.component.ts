@@ -20,7 +20,7 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
   }
 
-  @HostListener('window:scroll', ['$event'] )
+  @HostListener('window:scroll' )
   onScroll() {
     if (!this.scrolling) {
       if (window.pageYOffset % window.innerHeight  !== 0) {
