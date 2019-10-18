@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<nav class="site-navigation" *ngIf="router.url !== '/report'">
+<nav class="site-navigation" *ngIf="routerUrl !== '/report'">
   <ul>
     <li class="dropdown">
       <a routerLink="/"><img style="height:24px; padding: 1px 5px;" src="../assets/img/icons/icon.png" alt=""/></a>
@@ -22,4 +22,4 @@
 <main>
   <router-outlet></router-outlet>
 </main>
-<footer *ngIf="router.url !== '/report'"></footer>
+<footer *ngIf="routerUrl !== '/report'"></footer>
