@@ -1,8 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<nav class="site-navigation" *ngIf="routerUrl !== '/report'">
-  <ul>
+<hr />
+<nav class="main-nav" *ngIf="routerUrl !== '/report'">
+  <ul id="headButtons">
     <li class="dropdown">
-      <a routerLink="/"><img style="height:24px; padding: 1px 5px;" src="../assets/img/icons/icon.png" alt=""/></a>
+      <a routerLink="/"><img class="icon" src="../assets/img/OptOutLogo-04.png" alt=""/></a>
     </li>
     <li class="dropdown">
       <button routerLink="/about" class="dropbtn" >About</button>
@@ -16,6 +17,20 @@
         <li class="laws"> <a routerLink="/laws" routerLinkActive="active">Laws</a> </li>
         <li class="studies"> <a routerLink="/studies" routerLinkActive="active">Studies and Reports</a> </li>
       </ul>
+    </li>
+  </ul>
+  <ul id="headLinks">
+    <li class="dropdown">
+      <a href="https://twitter.com/optoutsocial"><img class="icon" src="../assets/img/nav_icons/twitter-black-shape.png" alt="twitter_icon"/></a>
+    </li>
+    <li class="dropdown">
+      <a href="https://github.com/orgs/opt-out-tools"><img class="icon" src="../assets/img/nav_icons/github-logo.png" alt="github_icon"/></a>
+    </li>
+    <li class="dropdown">
+      <a href="mailto:optoutsocialmedia@gmail.com"><img class="icon" src="../assets/img/nav_icons/gmail.png" alt="gmail_icon"/></a>
+    </li>
+    <li class="dropdown">
+      <a routerLink="/"><img class="icon" src="../assets/img/nav_icons/slack-symbol.png" alt="slack_icon"/></a>
     </li>
   </ul>
 </nav>
