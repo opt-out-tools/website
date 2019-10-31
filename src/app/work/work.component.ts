@@ -3,7 +3,7 @@ import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/c
 @Component({
   selector: 'app-work',
   templateUrl: './work.component.html',
-  styleUrls: ['./work.component.css']
+  styleUrls: ['./work.component.scss']
 })
 export class WorkComponent implements OnInit {
   private workPage: number;
@@ -13,7 +13,6 @@ export class WorkComponent implements OnInit {
   private scrolling: boolean;
 
   constructor() {
-    this.workPage = 1;
     this.scrolling = false;
   }
 

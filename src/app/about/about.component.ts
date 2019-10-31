@@ -3,7 +3,7 @@ import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/c
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
   private page: number;
@@ -13,7 +13,6 @@ export class AboutComponent implements OnInit {
   private scrolling: boolean;
 
   constructor() {
-    this.page = 1;
     this.scrolling = false;
   }
 
