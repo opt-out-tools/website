@@ -57,7 +57,7 @@ export class MultiStepFormComponent implements OnInit, AfterContentInit {
     this.submitAction.emit(value);
     this.step++;
     this.renderForm();
-    this.nextAction.emit(value);
+    // this.nextAction.emit(value);
   }
   finishHandle(value) {
     this.finishAction.emit(value);

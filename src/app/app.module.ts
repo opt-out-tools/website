@@ -23,6 +23,7 @@ import { WorkComponent } from './work/work.component';
 import { Work1Component } from './work/work1/work1.component';
 import { Work2Component } from './work/work2/work2.component';
 import { Work3Component } from './work/work3/work3.component';
+import {ScrollerDirective} from './shared/scroller.directive';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { Work3Component } from './work/work3/work3.component';
     WorkComponent,
     Work1Component,
     Work2Component,
-    Work3Component
+    Work3Component,
+    ScrollerDirective
   ],
   imports: [
     BrowserModule,
