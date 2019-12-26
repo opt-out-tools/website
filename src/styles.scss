@@ -3,6 +3,9 @@
    App specific CSS file.
    ========================================================================== */
 
+/* imports */
+@import "../node_modules/ng2-slim-loading-bar/style.css";
+
 /* universal */
 @font-face {
   font-family: 'Helvetica';
@@ -48,7 +51,5 @@ footer {
 footer img {
   padding: 22px 29px;
 }
-
-
 
 
