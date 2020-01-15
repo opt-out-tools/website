@@ -1,38 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CommunityComponent } from './community/community.component';
-import { ResearchComponent } from './research/research.component';
-import { LawsComponent } from './laws/laws.component';
-import { StudiesComponent } from './studies/studies.component';
-import { HomeComponent } from './home/home.component';
-import { SurveyComponent } from './survey/survey.component';
-import { MultiStepFormComponent } from './multi-step-form/multi-step-form.component';
+import { HomeComponent } from './pages/home/home.component';
+import { MultiStepFormComponent } from './shared/multi-step-form/multi-step-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ReportComponent } from './report/report.component';
-import { StepFormSelectorComponent } from './step-form-selector/step-form-selector.component';
+import { ReportComponent } from './pages/report/report.component';
+import { StepFormSelectorComponent } from './shared/step-form-selector/step-form-selector.component';
 import { FormStepDirective } from './directives/form-step.directive';
-import {HttpClientModule} from '@angular/common/http';
-import { AboutComponent } from './about/about.component';
-import { About1Component } from './about/about1/about1.component';
-import { About2Component } from './about/about2/about2.component';
-import { About3Component } from './about/about3/about3.component';
-import { WorkComponent } from './work/work.component';
-import { Work1Component } from './work/work1/work1.component';
-import { Work2Component } from './work/work2/work2.component';
-import { Work3Component } from './work/work3/work3.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AboutComponent } from './pages/about/about.component';
+import { About1Component } from './pages/about/about1/about1.component';
+import { About2Component } from './pages/about/about2/about2.component';
+import { About3Component } from './pages/about/about3/about3.component';
+import { WorkComponent } from './pages/work/work.component';
+import { Work1Component } from './pages/work/work1/work1.component';
+import { Work2Component } from './pages/work/work2/work2.component';
+import { Work3Component } from './pages/work/work3/work3.component';
+import { ScrollerDirective } from './directives/scroller.directive';
+import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    CommunityComponent,
-    ResearchComponent,
-    LawsComponent,
-    StudiesComponent,
     HomeComponent,
-    SurveyComponent,
     MultiStepFormComponent,
     ReportComponent,
     StepFormSelectorComponent,
@@ -44,12 +37,13 @@ import { Work3Component } from './work/work3/work3.component';
     WorkComponent,
     Work1Component,
     Work2Component,
-    Work3Component
+    Work3Component,
+    ScrollerDirective,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule, FormsModule, ReactiveFormsModule
+    AppRoutingModule, FormsModule, ReactiveFormsModule, SlimLoadingBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

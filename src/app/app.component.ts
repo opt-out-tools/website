@@ -1,5 +1,12 @@
 import { Component } from '@angular/core';
-import {Router} from '@angular/router';
+import {
+  NavigationCancel,
+  Event,
+  NavigationEnd,
+  NavigationError,
+  NavigationStart,
+  Router } from '@angular/router';
+import {SlimLoadingBarService} from 'ng2-slim-loading-bar';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +14,25 @@ import {Router} from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'opt-out';
+  title = 'Opt-Out';
   routerUrl: string;
-  constructor(private router: Router) {
-    this.routerUrl = router.url;
+  constructor(private loadingBar: SlimLoadingBarService, private router: Router) {
+    this.router.events.subscribe((event: Event) => {
+      this.navigationInterceptor(event);
+    });
+  }
+  private navigationInterceptor(event: Event): void {
+    if (event instanceof NavigationStart) {
+      this.loadingBar.start();
+    }
+    if (event instanceof NavigationEnd) {
+      this.loadingBar.complete();
+    }
+    if (event instanceof NavigationCancel) {
+      this.loadingBar.stop();
+    }
+    if (event instanceof NavigationError) {
+      this.loadingBar.stop();
+    }
   }
 }

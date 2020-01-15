@@ -11,13 +11,6 @@
     <li class="dropdown">
       <button routerLink="/work" class="dropbtn" >Work</button>
     </li>
-    <li class="dropdown">
-      <button class="dropbtn">Resources</button>
-      <ul class="dropdown-content">
-        <li class="laws"> <a routerLink="/laws" routerLinkActive="active">Laws</a> </li>
-        <li class="studies"> <a routerLink="/studies" routerLinkActive="active">Studies and Reports</a> </li>
-      </ul>
-    </li>
   </ul>
   <ul id="headLinks">
     <li class="dropdown">
@@ -33,8 +26,11 @@
       <a routerLink="/"><img class="icon" src="../assets/img/nav_icons/slack-symbol.png" alt="slack_icon"/></a>
     </li>
   </ul>
+
 </nav>
+
 <main>
   <router-outlet></router-outlet>
 </main>
+<ng2-slim-loading-bar color="darkblue" height="5px"></ng2-slim-loading-bar>
 <footer *ngIf="routerUrl !== '/report'"></footer>
