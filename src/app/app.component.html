@@ -3,16 +3,42 @@
 <nav class="main-nav" *ngIf="routerUrl !== '/report'">
   <ul id="headButtons">
     <li class="dropdown">
-      <a routerLink="/"><img class="icon" src="../assets/img/OptOutLogo-04.png" alt=""/></a>
+      <a routerLink="/"><img class="icon" src="../assets/img/OptOutLogo-04.png" alt=""/>Opt Out Tools</a>
     </li>
     <li class="dropdown">
-      <button routerLink="/about" class="dropbtn" >About</button>
+      <button routerLink="/about" class="dropbtn" >About US</button>
     </li>
     <li class="dropdown">
-      <button routerLink="/work" class="dropbtn" >Work</button>
+      <button routerLink="/work" class="dropbtn" >Tech</button>
+    </li>
+    <li class="dropdown">
+      <button routerLink="/work" class="dropbtn" >Research</button>
+    </li>
+    <li class="dropdown">
+      <button routerLink="/work" class="dropbtn" >Blog</button>
+    </li>
+    <li class="dropdown">
+      <button routerLink="/work" class="dropbtn" >FAQ</button>
+    </li>
+    <li class="dropdown">
+      <button routerLink="/work" class="dropbtn" >Take action</button>
     </li>
   </ul>
   <ul id="headLinks">
+    <li class="dropdown">
+      <a href="https://twitter.com/optoutsocial">Donate</a>
+    </li>
+  </ul>
+</nav>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<ng2-slim-loading-bar color="darkblue" height="5px"></ng2-slim-loading-bar>
+<footer *ngIf="routerUrl !== '/report'">
+  <p>Opt Out Tools</p>
+  <ul>
     <li class="dropdown">
       <a href="https://twitter.com/optoutsocial"><img class="icon" src="../assets/img/nav_icons/twitter-black-shape.png" alt="twitter_icon"/></a>
     </li>
@@ -26,11 +52,4 @@
       <a routerLink="/"><img class="icon" src="../assets/img/nav_icons/slack-symbol.png" alt="slack_icon"/></a>
     </li>
   </ul>
-
-</nav>
-
-<main>
-  <router-outlet></router-outlet>
-</main>
-<ng2-slim-loading-bar color="darkblue" height="5px"></ng2-slim-loading-bar>
-<footer *ngIf="routerUrl !== '/report'"></footer>
+</footer>
