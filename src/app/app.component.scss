@@ -11,10 +11,8 @@ hr {
 }
 .main-nav {
   position: fixed;
-  top: 5px;
   width: 100%;
-  height: 26px;
-  background-color: #F1F1F2;
+  height: 78px;
   display: grid;
   grid-template-columns: 75% 25%;
   box-shadow: inset 0 1px 5px #7B7B7C;
@@ -23,7 +21,7 @@ hr {
     padding: 0;
     display: flex;
     flex-flow: row wrap;
-    align-content: flex-end;
+    align-content: center;
     li {
       list-style-type:none;
       margin:0
@@ -36,7 +34,8 @@ hr {
     justify-content: flex-end
   }
   .dropbtn {
-    border: none;
+    border: 2px solid transparent;
+    border-radius: 8px;
     padding:0 10px;
     color: #0B3954;
     background-color: transparent;
@@ -67,6 +66,7 @@ nav .dropdown-content  {
     font-size:.9em;
     padding:.5em .6em;
     text-decoration: none;
+
   }
   a:hover {
     background-color: #ddd;
@@ -74,8 +74,21 @@ nav .dropdown-content  {
 }
 
 .dropdown:hover .dropdown-content {display: block;}
-.dropdown:hover .dropbtn {background-color: #009ea4;}
+.dropdown:hover .dropbtn {
+  //background-color: #009ea4;
+  border: 2px solid $primary;
+}
 
 .icon {
   height:20px; padding: 3px 5px;
+}
+
+.button {
+  width: 120px;
+  height: 40px;
+  border: 2px solid $secondary;
+  border-radius: 20px;
+  a {
+    text-decoration: none;
+  }
 }
