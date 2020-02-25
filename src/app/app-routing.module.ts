@@ -4,9 +4,11 @@ import {HomeComponent} from './pages/home/home.component';
 import {ReportComponent} from './pages/report/report.component';
 import {AboutComponent} from './pages/about/about.component';
 import {WorkComponent} from './pages/work/work.component';
+import {TechComponent} from './pages/tech/tech.component';
 
 const routes: Routes = [
   { path: 'about', component: AboutComponent },
+  { path: 'tech', component: TechComponent },
   { path: 'report', component: ReportComponent },
   { path: 'work', component: WorkComponent },
   { path: 'home',

@@ -19,6 +19,7 @@ import { Work2Component } from './pages/work/work2/work2.component';
 import { Work3Component } from './pages/work/work3/work3.component';
 import { ScrollerDirective } from './directives/scroller.directive';
 import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
+import { TechComponent } from './pages/tech/tech.component';
 
 
 
@@ -39,6 +40,7 @@ import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
     Work2Component,
     Work3Component,
     ScrollerDirective,
+    TechComponent,
   ],
   imports: [
     BrowserModule,
