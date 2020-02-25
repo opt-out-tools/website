@@ -1,61 +1,24 @@
-div#home{
-  height:calc(100vh - 100px);
+@import "../../../variables.scss";
+
+div#home {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+}
+
+@-moz-document url-prefix() {
+  div#home {
+    overflow-y: scroll;
+  }
+}
+
+article {
+  box-sizing: border-box;
+  height: 100vh;
+  padding: $headHeight $margin $footHeight $margin;
   font-family: 'Helvetica', sans-serif;
   font-style: normal;
   font-weight: normal;
   color: #2E3532;
-  margin-top: 100px;
-  #home-text {
-    display: block;
-    margin: 0 50px;
-    padding: 0 15px;
-    border-left: 2px solid black;
-  }
-  #button-holder {
-    #display: block;
-    margin: 0 50px;
-    padding: 0 30px;
-  }
-}
-
-h1,p {
-  position: relative;
-  font-family: 'Helvetica', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  color: #2E3532;
-}
-h1 {
-  font-size: 18px;
-  line-height: 20px;
-  font-weight: 600;
-}
-p {
-  font-size: 18px;
-  line-height: 20px;
-}
-
-img {
-  position: relative;
-  padding: 30px 50px 0 50px;
-  width: 250px;
-  filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
-}
-
-button {
-  display:flex;
-  padding:20px 35px;
-  // opacity: 50%;
-  font-family: 'Helvetica', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 28px;
-  line-height: 28px;
-  &#report_button{
-    background-color: rgba(16, 207, 201, 1);
-    border: 8px double black;
-    float:left;
-    filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
-  }
+  scroll-snap-align: end;
 }
 
