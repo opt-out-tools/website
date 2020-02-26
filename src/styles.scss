@@ -41,8 +41,30 @@ body {
   margin: 0;
 }
 
-main {
-  min-height: calc(100vh - 105px - 129px - 48px);
+div#scroller {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+}
+
+@-moz-document url-prefix() {
+  div#scroller {
+    overflow-y: scroll;
+  }
+}
+
+article {
+  box-sizing: border-box;
+  height: calc(100vh - calc(#{$headHeight+$footHeight}));
+  margin: $headHeight $margin calc(#{$headHeight+$footHeight});
+  font-family: 'Ubuntu', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: #2E3532;
+  scroll-snap-align: end;
+}
+
+article:last-of-type {
+  margin-bottom: $footHeight;
 }
 
 footer {
@@ -67,6 +89,7 @@ p {
 }
 
 .button-primary {
+  width: 12rem;
   padding: 1rem;
   margin: 1rem;
   font-size: 0.8rem;
