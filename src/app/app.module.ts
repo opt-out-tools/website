@@ -20,6 +20,10 @@ import { Work3Component } from './pages/work/work3/work3.component';
 import { ScrollerDirective } from './directives/scroller.directive';
 import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
 import { TechComponent } from './pages/tech/tech.component';
+import { ResearchComponent } from './pages/research/research.component';
+import { FaqComponent } from './pages/faq/faq.component';
+import { TakeActionComponent } from './pages/take-action/take-action.component';
+import { BlogComponent } from './pages/blog/blog.component';
 
 
 
@@ -41,6 +45,10 @@ import { TechComponent } from './pages/tech/tech.component';
     Work3Component,
     ScrollerDirective,
     TechComponent,
+    ResearchComponent,
+    FaqComponent,
+    TakeActionComponent,
+    BlogComponent,
   ],
   imports: [
     BrowserModule,

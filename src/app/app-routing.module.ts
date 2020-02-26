@@ -3,14 +3,19 @@ import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from './pages/home/home.component';
 import {ReportComponent} from './pages/report/report.component';
 import {AboutComponent} from './pages/about/about.component';
-import {WorkComponent} from './pages/work/work.component';
+import {ResearchComponent} from './pages/research/research.component';
 import {TechComponent} from './pages/tech/tech.component';
+import {FaqComponent} from './pages/faq/faq.component';
+import {TakeActionComponent} from './pages/take-action/take-action.component';
 
 const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'tech', component: TechComponent },
   { path: 'report', component: ReportComponent },
-  { path: 'work', component: WorkComponent },
+  { path: 'research', component: ResearchComponent },
+  { path: 'blog', component: ResearchComponent },
+  { path: 'faq', component: FaqComponent },
+  { path: 'takeAction', component: TakeActionComponent},
   { path: 'home',
     redirectTo: '',
     pathMatch: 'full'
