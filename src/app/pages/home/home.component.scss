@@ -15,10 +15,33 @@ article {
   box-sizing: border-box;
   height: 100vh;
   padding: $headHeight $margin $footHeight $margin;
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-style: normal;
   font-weight: normal;
   color: #2E3532;
   scroll-snap-align: end;
 }
 
+.intro {
+  margin: 5rem auto auto;
+  width: 38rem;
+  text-align: center;
+
+}
+
+.intro-h1 {
+  width: 25rem;
+  margin: auto;
+}
+
+.column-single-left {
+  width: 40%;
+  margin-left: 5%;
+  margin-right: auto;
+}
+
+.column-single-right {
+  width: 40%;
+  margin-left: auto;
+  margin-right: 5%;
+}

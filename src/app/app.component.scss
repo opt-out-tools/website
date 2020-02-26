@@ -11,7 +11,7 @@
   justify-content: space-between;
   align-items: center;
   grid-template-columns: 75% 25%;
-  background-color: $white;
+  //background-color: $white;
   border-bottom: 1px solid $primary;
 }
 
@@ -85,7 +85,7 @@
   width: 100%;
   height: $footHeight;
   z-index: 10;
-  background-color: $white;
+  //background-color: $white;
   border-top: 1px solid $primary;
   text-align: center;
   h3 {

@@ -5,6 +5,7 @@
 
 /* imports */
 @import "../node_modules/ng2-slim-loading-bar/style.css";
+@import "./variables.scss";
 
 /* universal */
 @font-face {
@@ -35,7 +36,7 @@ textarea {
 }
 
 body {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.76)), url('/assets/img/OptOutLogo-04.svg') repeat-y bottom right;
+  //background: linear-gradient(0deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.76)), url('/assets/img/OptOutLogo-04.svg') repeat-y bottom right;
   background-size: contain;
   margin: 0;
 }
@@ -52,4 +53,28 @@ footer img {
   padding: 22px 29px;
 }
 
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+h1, h2, h3, p {
+  font-family: Ubuntu, sans-serif;
+
+}
+p {
+   line-height: 1.5rem;
+}
+
+.button-primary {
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 0.8rem;
+  background-color: $secondary;
+  color: $white;
+  border-radius: 2rem;
+  border-style: solid;
+  border-color: $secondary;
+  outline: none;
+}
 
