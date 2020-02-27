@@ -89,25 +89,4 @@ h1 {
 
 @import "../../../variables.scss";
 
-div#about {
-  height: 100vh;
-  scroll-snap-type: y mandatory;
-}
-
-@-moz-document url-prefix() {
-  div#about {
-    overflow-y: scroll;
-  }
-}
-
-article {
-  box-sizing: border-box;
-  height: 100vh;
-  padding: $headHeight $margin $footHeight $margin;
-  font-family: 'Helvetica', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  color: #2E3532;
-  scroll-snap-align: end;
-}
 
