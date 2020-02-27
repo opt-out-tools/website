@@ -2,9 +2,17 @@
 
 article {
   padding-top: 2rem;
-  text-align: center;
 }
 
 .support_logo {
   width: 22rem;
+}
+
+a {
+  color: $primary;
+}
+
+li {
+  line-height: 1.5;
+  list-style-type: circle;
 }
