@@ -17,6 +17,7 @@ import { ResearchComponent } from './pages/research/research.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { TakeActionComponent } from './pages/take-action/take-action.component';
 import { BlogComponent } from './pages/blog/blog.component';
+import {RedirectGuardService} from './services/redirect-guard.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { BlogComponent } from './pages/blog/blog.component';
     HttpClientModule,
     AppRoutingModule, FormsModule, ReactiveFormsModule, SlimLoadingBarModule
   ],
-  providers: [],
+  providers: [RedirectGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

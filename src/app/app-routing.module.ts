@@ -8,13 +8,27 @@ import {TechComponent} from './pages/tech/tech.component';
 import {FaqComponent} from './pages/faq/faq.component';
 import {TakeActionComponent} from './pages/take-action/take-action.component';
 import {BlogComponent} from './pages/blog/blog.component';
+import {RedirectGuardService} from './services/redirect-guard.service';
 
 const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'tech', component: TechComponent },
   { path: 'report', component: ReportComponent },
   { path: 'research', component: ResearchComponent },
-  { path: 'blog', component: BlogComponent },
+  { path: 'blog',
+    canActivate: [RedirectGuardService],
+    component: RedirectGuardService,
+    data: {
+      externalUrl: 'https://medium.com/opt-out-tools'
+    }
+  },
+  { path: 'donate',
+    canActivate: [RedirectGuardService],
+    component: RedirectGuardService,
+    data: {
+      externalUrl: 'https://opencollective.com/opt-out-tools'
+    }
+  },
   { path: 'faq', component: FaqComponent },
   { path: 'takeAction', component: TakeActionComponent},
   { path: 'home',
