@@ -1,92 +1,10 @@
-/*
-.parent {
-  height: 100vh;
-  scroll-snap-type: y mandatory;
-}
-
-@-moz-document url-prefix() {
-  .parent {
-    overflow-y: scroll;
-  }
-}
-
-.child {
-  scroll-snap-align: end;
-}
-
-.about-us-page {
-  height:calc(100vh - 100px);
-  padding: 100px 50px 0;
-  font-family: 'Helvetica', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  color: #2E3532;
-}
-
-h1 {
-  font-size: 24px;
-  line-height: 40px;
-  font-weight: 600;
-}
-
-.about-text {
-  padding: 0 15px 20px;
-}
-
-.about-columns {
-  display: flex;
-  padding-bottom: 0;
-  justify-content: space-between;
-}
-
-.column {
-  flex-basis: 24%;
-  min-width:160px;
-  text-align: center;
-  h4 {
-    margin: 0;
-    padding-top: 5px;
-  }
-  p {
-    margin: 0;
-    padding-top: 5px;
-    font-size: 14px;
-    text-align: left;
-  }
-  img {
-    height: 70px;
-    padding: 20px 0;
-  }
-}
-
-.about-vision, .about-mission {
-  max-width: 38%;
-  margin: 0;
-  text-transform: uppercase;
-  h3 {
-    margin: 0;
-    padding-top: 20px;
-  }
-  p {
-    margin: 0 0 5px;
-  }
-}
-
-.about-vision {
-  text-align: left;
-}
-.about-mission {
-  text-align: right;
-}
-
-.border-left {
-  border-left: 2px solid black;
-}
-.border-right {
-  border-right: 2px solid black;
-}
-*/
-
 @import "../../../variables.scss";
 
+article {
+  padding-top: 2rem;
+  text-align: center;
+}
 
+.support_logo {
+  width: 22rem;
+}
