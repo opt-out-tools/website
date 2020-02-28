@@ -12,3 +12,10 @@ li {
   line-height: 1.5;
   list-style-type: circle;
 }
+
+.imgWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
