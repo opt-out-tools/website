@@ -61,11 +61,11 @@ article {
   font-weight: normal;
   color: #2E3532;
   scroll-snap-align: end;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   @-moz-document url-prefix() {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
 }

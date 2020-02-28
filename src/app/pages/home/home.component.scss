@@ -42,6 +42,8 @@ aside {
 .column-third {
   flex-basis: 31%;
   text-align: center;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
   h2 {
     font-weight: 400;
   }

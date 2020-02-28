@@ -45,3 +45,14 @@
   margin-right: 5%;
 }
 
+a {
+  color: $primary;
+  text-decoration: none;
+}
+
+.centered {
+  display: flex;
+  * {
+    margin: auto;
+  }
+}
