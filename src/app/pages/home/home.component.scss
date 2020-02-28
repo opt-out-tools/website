@@ -56,3 +56,10 @@ aside {
   height:100%;
   margin: auto;
 }
+
+.centered {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

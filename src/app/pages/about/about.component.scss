@@ -19,3 +19,32 @@ li {
   justify-content: space-around;
 
 }
+
+.portrait {
+  display:flex;
+  text-align: left;
+  justify-content: space-between;
+  .portrait_pic {
+    position: relative;
+    width: 25%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+  aside {
+    width:73%;
+  }
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.noScroll {
+  height: auto;
+}
+
+article {
+  padding-top: 0;
+  height:auto;
+  margin: 2rem $margin 2rem;
+}
+
+
