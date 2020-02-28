@@ -1,0 +1,17 @@
+<section class="carousel-wrapper" [ngStyle]="carouselWrapperStyle">
+    <ng-container *ngFor="let item of items; let i = index">
+      <div *ngIf="i === currentSlide" class="carousel-item" @carouselAnimation>
+        <img src="assets/img/temp/candle_holder.png" alt="holder">
+        <h2>{{item.title}}</h2>
+        <p>"{{item.text}}"</p>
+      </div>
+    </ng-container>
+    <!-- controls -->
+    <button class="control prev" (click)="onPreviousClick()">
+      <span class="arrow left"></span>
+    </button>
+    <button class="control next" (click)="onNextClick()">
+      <span class="arrow right"></span>
+    </button>
+</section>
+

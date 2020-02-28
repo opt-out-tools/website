@@ -18,6 +18,8 @@ import { FaqComponent } from './pages/faq/faq.component';
 import { TakeActionComponent } from './pages/take-action/take-action.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import {RedirectGuardService} from './services/redirect-guard.service';
+import { CarouselComponent } from './shared/carousel/carousel.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -34,11 +36,16 @@ import {RedirectGuardService} from './services/redirect-guard.service';
     FaqComponent,
     TakeActionComponent,
     BlogComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
-    AppRoutingModule, FormsModule, ReactiveFormsModule, SlimLoadingBarModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    SlimLoadingBarModule
   ],
   providers: [RedirectGuardService],
   bootstrap: [AppComponent]
