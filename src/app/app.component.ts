@@ -14,7 +14,7 @@ import {SlimLoadingBarService} from 'ng2-slim-loading-bar';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Opt-Out';
+  title = 'Opt Out Tools';
   routerUrl: string;
   constructor(private loadingBar: SlimLoadingBarService, private router: Router) {
     this.router.events.subscribe((event: Event) => {

@@ -56,7 +56,6 @@ article {
   box-sizing: border-box;
   height: calc(100vh - calc(#{$headHeight+$footHeight}));
   margin: $headHeight $margin calc(#{$headHeight+$footHeight});
-  font-family: 'Ubuntu', sans-serif;
   font-style: normal;
   font-weight: normal;
   color: #2E3532;
@@ -104,8 +103,8 @@ h1 {
   font-size: 2.5rem;
 }
 
-h1, h2, h3, p {
-  font-family: Ubuntu, sans-serif;
+h1, h2, h3, h4, h5, aside, p {
+  font-family: Helvetica, sans-serif;
 
 }
 p {
@@ -117,11 +116,11 @@ p {
   padding: 1rem;
   margin: 1rem;
   font-size: 0.8rem;
-  background-color: $secondary;
-  color: $white;
+  background-color: $highlight;
+  color: $textBlack;
   border-radius: 2rem;
   border-style: solid;
-  border-color: $secondary;
+  border-color: transparent;
   outline: none;
   cursor: pointer;
 }

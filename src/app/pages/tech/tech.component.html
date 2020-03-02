@@ -9,17 +9,18 @@
     <h2>Collecting the Data</h2>
     <p>
       We built the dataset by searching for tweets with key terms in them, such as "camel toe", which happens to be a
-      strong indicator of misogyny language we have found.
+      strong indicator of misogyny language <a href="http://github.com/opt-out-tools/study-online-misogyny">we have found</a> .
     </p>
 
     <p>
       There are obvious limitations to this approach, as your search is only as good as you are mean. We then decided to
-      search for the names of politicians and other public women such as @UnburntWitch (Zoë Quinn, the games developer
-      affected by Gamergate) so that we captured the abuse rather than guessed. Using this technique, we got a lot of
-      tweets, but the data was heavily diluted, meaning that the number of misogynistic tweets was low in comparison to
-      the number of non-misogynistic tweets. We then reached out to our academic community to boost the number of
-      misogynistic tweets. Zeerak Waseem gave us his annotated dataset, which allowed us to move on to labeling our
-      tweets.
+      search for the names of politicians and other public women such as @UnburntWitch (
+      <a href="https://en.wikipedia.org/wiki/Gamergate_controversy">Zoë Quinn</a> , the games developer affected by
+      Gamergate) so that we captured the abuse rather than guessed. Using this technique, we got a lot of tweets, but
+      the data was heavily diluted, meaning that the number of misogynistic tweets was low in comparison to the number
+      of non-misogynistic tweets. We then reached out to our academic community to boost the number of misogynistic
+      tweets. <a href="https://scholar.google.com/citations?user=3M3WdvkAAAAJ&hl=en">Zeerak Waseem</a>  gave us his
+      annotated dataset, which allowed us to move on to labeling our tweets.
     </p>
   </article>
 
@@ -29,10 +30,13 @@
     </h2>
     <p>We classified tweets as misogynistic if they showed one of the following traits*:</p>
 
+
     <h3 class="color_1">Insult</h3>
     <p>
       Disrespect or scornful verbal abuse with no other larger intention than to hurt, degrade or belittle a person.
     </p>
+    <aside>“@GretaThunberg That's just a start to the hypocrisy from climate Nazis.”</aside>
+
 
     <h3 class="color_2">Sexual Harassment</h3>
     <p>
@@ -40,11 +44,16 @@
       innuendos, sexual slurs, offensive and persistent risqué jokes or jesting and kidding about sex or
       gender-specific traits.
     </p>
+    <aside>
+      “#MKR has to be scripted. Meat girls serving cock who sprayed sorbet all over the
+      kitchen? I've seen porn just like this...”
+    </aside>
 
     <h3 class="color_3">Threats of Violence</h3>
     <p>
       Threats or comments that include an indication of a violent physical dimension.
     </p>
+    <aside>“I just want to knock Kat's cocky face out #mkr”</aside>
 
     <h3 class="color_1">Gender essentialism</h3>
     <p>
@@ -52,28 +61,42 @@
       differences between women and men’s personalities/behaviors, women being innately more nurturing than men and
       mothers naturally more sensitive to a baby’s feelings than fathers.
     </p>
+    <aside>
+      “@ZackFord @femfreq So stop crying and make some movies with female
+      protagonists. Or is whining all you are good for?”
+    </aside>
 
     <h3 class="color_2">Transmisogyny</h3>
     <p>
       Negative attitudes expressed through cultural hate, individual and state violence, and discrimination toward
       trans-women and trans and gender non-conforming people on the feminine end of the gender spectrum.
     </p>
+    <aside>
+      “Nice knobbly knees”
+      Hashtags might include #womanface #transcult #genderfree #sexnotgender
+      #gendercritical (...)
+    </aside>
 
     <h3 class="color_3">Objectification</h3>
     <p>
       View of woman as objects rather than as individuals.
     </p>
+    <aside>
+      “These two blondes are not skinny enough to be models. #MKR”
+    </aside>
 
     <h3 class="color_1">Derailing</h3>
     <p>
       Interrupting someone in order to change the conversation to something that the perpetrator feels more
       authoritative talking about or to reassert their preferred norms.
     </p>
+    <aside>“RT @TheDarkManChris: Call me sexist but I think some women are seriously lacking
+      knowledge l when it comes to feminism #random”</aside>
 
-    <aside>
+    <p class="footnote">
       <i>* We realize the limitations of these labels and we’re working hard to improve and understand misogyny better, please see our
         page <a routerLink="/research">research</a> for what we’re doing since!</i>
-    </aside>
+    </p>
   </article>
 
   <article>
@@ -81,10 +104,11 @@
       <img src="http://goo.gl/vyAs27" alt="">
     </picture>
     <p>
-      Here we present a data statement, proposed by Emily M. Bender et. al., as a way to simply communicate important
-      details about our dataset. With this, we hope to address critical ethical issues that result from machine learning
-      modeling. Through transparency about the limitations of our modeling, we hope to help alleviate issues related to
-      exclusion and bias in language technology.
+      Here we present a data statement, proposed by
+      <a href="https://www.aclweb.org/anthology/people/e/emily-m-bender/">Emily M. Bender</a>  et. al., as a way to
+      simply communicate important details about our dataset. With this, we hope to address critical ethical issues that
+      result from machine learning modeling. Through transparency about the limitations of our modeling, we hope to help
+      alleviate issues related to exclusion and bias in language technology.
     </p>
   </article>
 
@@ -92,19 +116,21 @@
     <section class="column-single-left">
       <h2>Modeling</h2>
       <p>
-        We’re using a simple logistic regression model to classify the tweets as misogynistic or not. This is a common and
-        excellent type of linear algorithm to use initially, while we get up on our feet. Statistics power the model using
-        stochastic descent — the optimization procedure. The result is a solution that works effectively with most
-        learning problems.
+        We’re using a simple <a href="https://en.wikipedia.org/wiki/Logistic_regression">logistic regression</a> model
+        to classify the tweets as misogynistic or not. This is a common and excellent type of linear algorithm to use
+        initially, while we get up on our feet. Statistics power the model using
+        <a href="https://en.wikipedia.org/wiki/Stochastic_gradient_descent">stochastic descent</a> — the optimization
+        procedure. The result is a solution that works effectively with most learning problems.
       </p>
     </section>
     <section class="column-single-right">
       <h2>How the Browser Extension works</h2>
       <p>
-        The mechanics of the extension is very simple. We have a model sat on Softerrific’s servers. As the page loads the
-        tweets are sent to the backend, the model is hit and returns a score. If the score indicates the content is
-        misogynistic, the text is hidden, if not it’s left on the page. For our initial alpha version of the browser
-        extension, that is as complex as it needs to be.
+        The mechanics of the extension is very simple. We have a model sat on
+        <a href="https://softerrific.com/">Softerrific’s</a> servers. As the page loads the tweets are sent to the
+        backend, the model is hit and returns a score. If the score indicates the content is misogynistic, the text is
+        hidden, if not it’s left on the page. For our initial alpha version of the browser extension, that is as complex
+        as it needs to be.
       </p>
     </section>
 
@@ -124,11 +150,13 @@
       </p>
       <p>
         Many female politicians across the globe
-        are forced to contend with misogyny on a regular basis, sometimes even resulting in these politicians stepping
-        down from their positions. If a politician also happens to be black, trans, obese, or any other intersecting
-        identity that is already discriminated against, the intensity and amount of abuse increases. Our next focus will
-        be on protecting the voices of black female politicians, as we have found they disproportionately suffer from
-        online misogyny. It is vital to be this precise for our initial modeling. Our next step will then be to increase
+        are forced to contend with misogyny on a regular basis, sometimes even resulting in these politicians <a
+        href="https://womensmediacenter.com/speech-project/nameitchangeit">stepping down</a> from their positions. If a
+        politician also happens to be black, trans, obese, or any other intersecting identity that is already
+        discriminated against, the intensity and amount of abuse increases. Our next focus will be on protecting the
+        voices of black female politicians, as we have found they
+        <a href="https://decoders.amnesty.org/projects/troll-patrol/findings">disproportionately</a> suffer from online
+        misogyny. It is vital to be this precise for our initial modeling. Our next step will then be to increase
         inclusivity as we learn how we can model misogyny better.
       </p>
       <p>If you want to know more or help us out with labeling our dataset, then reach out to be an expert annotator.</p>
@@ -150,7 +178,8 @@
         harassment.
       </p>
       <p>
-        If you want to know more or help us out with implementing this, head to our github repo.
+        If you want to know more or help us out with implementing this, head to our
+        <a href="https://github.com/opt-out-tools">github repo.</a>
       </p>
     </section>
 
@@ -172,7 +201,8 @@
     <section>
       <h4>Improved reporting</h4>
       <p>
-        If you want to know more or help us out with implementing this, head to our github repo.
+        If you want to know more or help us out with implementing this, head to our
+        <a href="https://github.com/opt-out-tools">github repo.</a>
       </p>
     </section>
   </article>

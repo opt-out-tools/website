@@ -22,6 +22,13 @@ const routes: Routes = [
       externalUrl: 'https://medium.com/opt-out-tools'
     }
   },
+  { path: 'extension',
+    canActivate: [RedirectGuardService],
+    component: RedirectGuardService,
+    data: {
+      externalUrl: 'https://addons.mozilla.org/en-US/firefox/addon/opt-out-tools/?src=search'
+    }
+  },
   { path: 'donate',
     canActivate: [RedirectGuardService],
     component: RedirectGuardService,
