@@ -1,6 +1,6 @@
 import {
   AfterViewInit, ChangeDetectorRef,
-  Component, Input,
+  Component, Input, OnDestroy,
 } from '@angular/core';
 import {style, transition, trigger, animate, query, group} from '@angular/animations';
 import {interval, Subscription} from 'rxjs';
@@ -40,7 +40,7 @@ type Orientation = ( 'prev' | 'next' | 'none' );
     ])
   ]
 })
-export class CarouselComponent implements AfterViewInit {
+export class CarouselComponent implements AfterViewInit, OnDestroy {
 
   carouselWrapperStyle = {};
   private currentSlide = 0;
@@ -110,13 +110,6 @@ export class CarouselComponent implements AfterViewInit {
 
   ];
 
-  onPreviousClick() {
-    const previous = this.currentSlide - 1;
-    this.currentSlide = previous < 0 ? this.items.length - 1 : previous;
-    this.orientation = 'prev';
-    this.changeDetectorRef.detectChanges();
-  }
-
   onNextClick() {
     const next = this.currentSlide + 1;
     this.currentSlide = next === this.items.length ? 0 : next;
@@ -135,4 +128,7 @@ export class CarouselComponent implements AfterViewInit {
     this.subscription = source.subscribe(val => this.onNextClick());
   }
 
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
 }
