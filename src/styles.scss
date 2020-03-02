@@ -116,8 +116,9 @@ p {
   padding: 1rem;
   margin: 1rem;
   font-size: 0.8rem;
-  background-color: $highlight;
-  color: $textBlack;
+  font-weight: bold;
+  background-color: $secondary;
+  color: $white;
   border-radius: 2rem;
   border-style: solid;
   border-color: transparent;
