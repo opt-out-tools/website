@@ -1,52 +1,33 @@
 import {
-  AfterViewInit,
+  AfterViewInit, ChangeDetectorRef,
   Component, Input,
 } from '@angular/core';
 import {style, transition, trigger, animate, query, group} from '@angular/animations';
-const left = [
-  query(':enter, :leave', style({ position: 'fixed', width: '100%' }), { optional: true }),
-  group([
-    query(':enter', [style({ transform: 'translateX(-100%)' }), animate('3s ease-out', style({ transform: 'translateX(0%)' }))], {
-      optional: true,
-    }),
-    query(':leave', [style({ transform: 'translateX(0%)' }), animate('3s ease-out', style({ transform: 'translateX(100%)' }))], {
-      optional: true,
-    }),
-  ]),
-];
+import {interval, Subscription} from 'rxjs';
 
-const right = [
-  query(':enter, :leave', style({ position: 'fixed', width: '100%' }), { optional: true }),
-  group([
-    query(':enter', [style({ transform: 'translateX(100%)' }), animate('3s ease-out', style({ transform: 'translateX(0%)' }))], {
-      optional: true,
-    }),
-    query(':leave', [style({ transform: 'translateX(0%)' }), animate('3s ease-out', style({ transform: 'translateX(-100%)' }))], {
-      optional: true,
-    }),
-  ]),
-];
+type Orientation = ( 'prev' | 'next' | 'none' );
+
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss'],
   animations: [
-    trigger('animSlider', [
-      transition(':increment',
-        right
-      ),
-      transition(':decrement',
-        left
-      ),
-    ]),
-    trigger('carouselAnimation', [
-      transition('void => *', [
+    trigger('slide', [
+      transition('void => next', [
         style({transform: 'translateX(100%)'}),
-        animate('2000ms ease-in', style({transform: 'translateX(0%)'}))
+        animate('1000ms ease-in', style({transform: 'translateX(0%)'}))
       ]),
-      transition('* => void', [
-        animate('2000ms ease-in', style({transform: 'translateX(-100%)'}))
-      ])
+      transition('next => void', [
+        animate('1000ms ease-in', style({transform: 'translateX(-100%)'}))
+      ]),
+      transition('void => prev', [
+        style({transform: 'translateX(-100%)'}),
+        animate('1000ms ease-in', style({transform: 'translateX(0%)'}))
+      ]),
+      transition('prev => void', [
+        animate('1000ms ease-in', style({transform: 'translateX(100%)'}))
+      ]),
+
     ]),
     trigger('slideAnimation', [
       transition('void => *', [
@@ -63,6 +44,15 @@ export class CarouselComponent implements AfterViewInit {
 
   carouselWrapperStyle = {};
   private currentSlide = 0;
+  private changeDetectorRef: ChangeDetectorRef;
+  public orientation: Orientation;
+  subscription: Subscription;
+  constructor( changeDetectorRef: ChangeDetectorRef ) {
+    this.changeDetectorRef = changeDetectorRef;
+    this.orientation = 'next';
+
+  }
+
   @Input() items = [
     {
       title: 'Laurie Penny',
@@ -123,20 +113,26 @@ export class CarouselComponent implements AfterViewInit {
   onPreviousClick() {
     const previous = this.currentSlide - 1;
     this.currentSlide = previous < 0 ? this.items.length - 1 : previous;
-    // console.log('previous clicked, new current slide is: ', this.currentSlide);
+    this.orientation = 'prev';
+    this.changeDetectorRef.detectChanges();
   }
 
   onNextClick() {
     const next = this.currentSlide + 1;
     this.currentSlide = next === this.items.length ? 0 : next;
-    // console.log('next clicked, new current slide is: ', this.currentSlide);
+    this.orientation = 'next';
+    this.changeDetectorRef.detectChanges();
   }
 
   onSelect(i) {
+    this.orientation = i > this.currentSlide ? 'next' : 'prev';
+    this.changeDetectorRef.detectChanges();
     this.currentSlide = i;
   }
 
   ngAfterViewInit() {
+    const source = interval(8000);
+    this.subscription = source.subscribe(val => this.onNextClick());
   }
 
 }

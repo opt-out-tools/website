@@ -1,24 +1,15 @@
 <section class="carousel-wrapper" [ngStyle]="carouselWrapperStyle">
-    <ng-container *ngFor="let item of items; let i = index">
-      <div [@carouselAnimation]="currentSlide" *ngIf="i === currentSlide" class="carousel-item">
+    <ng-container  *ngFor="let item of items; let i = index">
+      <div [@slide]="orientation" *ngIf="i === currentSlide" class="carousel-item">
         <h2>{{item.title}}</h2>
         <p>"{{item.text}}"</p>
       </div>
     </ng-container>
-    <!-- controls -->
-    <button class="control prev" (click)="onPreviousClick()">
-      <span class="arrow left"></span>
-    </button>
-    <button class="control next" (click)="onNextClick()">
-      <span class="arrow right"></span>
-    </button>
 </section>
 
 <div class="slider centered">
-
-
   <ng-container *ngFor="let item of items; let i = index">
-    <ng-container><a (click)="onSelect(i)" [ngClass]="{'current': i === currentSlide }" ></a></ng-container>
+    <ng-container><a @slideAnimation (click)="onSelect(i)" [ngClass]="{'current': i === currentSlide }" ></a></ng-container>
   </ng-container>
 </div>
 
