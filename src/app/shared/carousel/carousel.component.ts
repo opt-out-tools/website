@@ -2,14 +2,53 @@ import {
   AfterViewInit,
   Component, Input,
 } from '@angular/core';
-import {style, transition, trigger, animate} from '@angular/animations';
+import {style, transition, trigger, animate, query, group} from '@angular/animations';
+const left = [
+  query(':enter, :leave', style({ position: 'fixed', width: '100%' }), { optional: true }),
+  group([
+    query(':enter', [style({ transform: 'translateX(-100%)' }), animate('3s ease-out', style({ transform: 'translateX(0%)' }))], {
+      optional: true,
+    }),
+    query(':leave', [style({ transform: 'translateX(0%)' }), animate('3s ease-out', style({ transform: 'translateX(100%)' }))], {
+      optional: true,
+    }),
+  ]),
+];
 
+const right = [
+  query(':enter, :leave', style({ position: 'fixed', width: '100%' }), { optional: true }),
+  group([
+    query(':enter', [style({ transform: 'translateX(100%)' }), animate('3s ease-out', style({ transform: 'translateX(0%)' }))], {
+      optional: true,
+    }),
+    query(':leave', [style({ transform: 'translateX(0%)' }), animate('3s ease-out', style({ transform: 'translateX(-100%)' }))], {
+      optional: true,
+    }),
+  ]),
+];
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss'],
   animations: [
+    trigger('animSlider', [
+      transition(':increment',
+        right
+      ),
+      transition(':decrement',
+        left
+      ),
+    ]),
     trigger('carouselAnimation', [
+      transition('void => *', [
+        style({transform: 'translateX(100%)'}),
+        animate('2000ms ease-in', style({transform: 'translateX(0%)'}))
+      ]),
+      transition('* => void', [
+        animate('2000ms ease-in', style({transform: 'translateX(-100%)'}))
+      ])
+    ]),
+    trigger('slideAnimation', [
       transition('void => *', [
         style({ opacity: 0 }),
         animate('300ms', style({ opacity: 1 }))
@@ -91,6 +130,10 @@ export class CarouselComponent implements AfterViewInit {
     const next = this.currentSlide + 1;
     this.currentSlide = next === this.items.length ? 0 : next;
     // console.log('next clicked, new current slide is: ', this.currentSlide);
+  }
+
+  onSelect(i) {
+    this.currentSlide = i;
   }
 
   ngAfterViewInit() {
