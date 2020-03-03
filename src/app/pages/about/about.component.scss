@@ -10,9 +10,7 @@ a {
   color: $primary;
 }
 
-.support_logo {
-  width: 22rem;
-}
+
 
 .values {
   display: flex;
@@ -40,10 +38,22 @@ a {
   }
 }
 
-.imgWrapper {
+.logos {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  width: 100%;
+}
+
+.logoWrapper {
+  width: 50%;
+}
+
+.support_logo1 {
+  width: 100%;
+}
+.support_logo2 {
+  width: 100%;
 }
 
 .portrait {
