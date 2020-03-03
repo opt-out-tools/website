@@ -52,6 +52,9 @@ a {
   justify-content: space-between;
   .portrait_pic {
     position: relative;
+    object-fit: contain;
+    max-width:1200px;
+    max-height:1600px;
     width: 25%;
     height: auto;
     border-radius: 0.5rem;
