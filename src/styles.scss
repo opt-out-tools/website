@@ -58,6 +58,11 @@ div#freeScroller {
   scroll-behavior: smooth;
 }
 
+div#regularScroller {
+  overflow-y: scroll;
+  height: calc(100vh - #{$headHeight + $footHeight});
+}
+
 @-moz-document url-prefix() {
   div#scroller {
     overflow-y: scroll;
