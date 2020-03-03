@@ -12,3 +12,12 @@ h4 {
 p {
   margin-block-start: 0.5rem;
 }
+
+.contribute {
+  @media screen and (max-width: $cross2) and (orientation: landscape) {
+    h2, h3, h4 {
+      margin-block-start: 0.5rem;
+      margin-block-end: 0.5rem;
+    }
+  }
+}

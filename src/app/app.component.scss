@@ -42,8 +42,8 @@
   .dropbtn {
     height: 3rem;
     padding:0 1rem;
-    border: 2px solid transparent;
-    border-radius: 12px;
+    border: 0.125rem solid transparent;
+    border-radius: 0.75rem;
     outline: none;
     font-style: normal;
     font-weight: normal;
@@ -81,7 +81,7 @@
 }
 
 .dropdown:hover .dropbtn {
-  border: 2px solid $primary;
+  border: 0.125rem solid $primary;
 }
 
 .logo {
