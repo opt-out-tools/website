@@ -7,7 +7,7 @@
     </ng-container>
 </section>
 
-<div class="slider centered">
+<div class="slider">
   <ng-container *ngFor="let item of items; let i = index">
     <ng-container><a @slideAnimation (click)="onSelect(i)" [ngClass]="{'current': i === currentSlide }" ></a></ng-container>
   </ng-container>
