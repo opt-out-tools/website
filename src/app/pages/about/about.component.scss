@@ -1,11 +1,17 @@
 @import "../../../variables.scss";
 
-.support_logo {
-  width: 22rem;
+
+article {
+  height:auto;
+  padding-top: 0.5rem;
 }
 
 a {
   color: $primary;
+}
+
+.support_logo {
+  width: 22rem;
 }
 
 .values {
@@ -32,14 +38,12 @@ a {
       color: $secondary;
     }
   }
-
 }
 
 .imgWrapper {
   display: flex;
   align-items: center;
   justify-content: space-around;
-
 }
 
 .portrait {
@@ -61,11 +65,6 @@ a {
 
 .noScroll {
   height: auto;
-}
-
-article {
-  height:auto;
-  margin: 2rem $margin 2rem;
 }
 
 

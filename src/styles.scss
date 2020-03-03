@@ -52,6 +52,8 @@ div#scroller {
   }
 }
 
+
+
 article {
   box-sizing: border-box;
   height: calc(100vh - calc(#{$headHeight+$footHeight}));
@@ -110,6 +112,17 @@ h1, h2, h3, h4, h5, aside, p {
 p {
    line-height: 1.5rem;
 }
+
+a {
+  color: $primary;
+  text-decoration: none;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+
 
 .button-primary {
   width: 12rem;
