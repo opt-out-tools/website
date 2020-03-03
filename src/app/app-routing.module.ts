@@ -15,25 +15,44 @@ const routes: Routes = [
   { path: 'tech', component: TechComponent },
   { path: 'report', component: ReportComponent },
   { path: 'research', component: ResearchComponent },
-  { path: 'blog',
+  {
+    path: 'blog',
     canActivate: [RedirectGuardService],
     component: RedirectGuardService,
     data: {
       externalUrl: 'https://medium.com/opt-out-tools'
     }
   },
-  { path: 'extension',
+  {
+    path: 'extension',
     canActivate: [RedirectGuardService],
     component: RedirectGuardService,
     data: {
       externalUrl: 'https://addons.mozilla.org/en-US/firefox/addon/opt-out-tools/?src=search'
     }
   },
-  { path: 'donate',
+  {
+    path: 'donate',
     canActivate: [RedirectGuardService],
     component: RedirectGuardService,
     data: {
       externalUrl: 'https://opencollective.com/opt-out-tools'
+    }
+  },
+  {
+    path: 'twitter',
+    canActivate: [RedirectGuardService],
+    component: RedirectGuardService,
+    data: {
+      externalUrl: 'https://twitter.com/optoutools'
+    }
+  },
+  {
+    path: 'github',
+    canActivate: [RedirectGuardService],
+    component: RedirectGuardService,
+    data: {
+      externalUrl: 'https://github.com/opt-out-tools/start-here'
     }
   },
   { path: 'faq', component: FaqComponent },
