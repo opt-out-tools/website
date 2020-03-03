@@ -10,11 +10,10 @@ a {
   color: $primary;
 }
 
-
-
 .values {
   display: flex;
   list-style: none;
+  padding-inline-start: 0;
   justify-content: space-between;
   flex-wrap: wrap;
   li {
