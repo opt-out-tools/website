@@ -50,6 +50,7 @@ a {
   display:flex;
   text-align: left;
   justify-content: space-between;
+  scroll-snap-align: start;
   .portrait_pic {
     position: relative;
     object-fit: contain;
@@ -69,6 +70,10 @@ a {
 .noScroll {
   height: auto;
   margin-bottom: 2rem;
+}
+
+.snap {
+  scroll-snap-align: end;
 }
 
 
