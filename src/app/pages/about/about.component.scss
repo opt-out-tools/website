@@ -3,7 +3,7 @@
 
 article {
   padding-top: 0.5rem;
-  scroll-snap-align: start end;
+  scroll-snap-align: center;
 }
 
 a {
@@ -69,7 +69,7 @@ a {
 
 .noScroll {
   height: auto;
-  margin-bottom: 2rem;
+  scroll-snap-align: start;
 }
 
 .snap {

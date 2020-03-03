@@ -21,13 +21,21 @@
   width: 42%;
   margin-left: 4%;
   margin-right: auto;
+  overflow: hidden;
+  @media (max-width: $cross2) {
+    width: 45%;
+  }
+
 }
 
 .column-single-right {
   width: 42%;
   margin-left: auto;
   margin-right: 4%;
-
+  overflow: hidden;
+  @media (max-width: $cross2) {
+    width: 45%;
+  }
 }
 
 aside {
@@ -41,6 +49,7 @@ aside {
 .columns {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .column-third {
@@ -60,6 +69,13 @@ aside {
     object-fit: contain;
     overflow:hidden;
   }
+  @media (max-width: $cross2) {
+    padding: 0.5rem 0.5rem;
+    img {
+      width: 30%;
+      margin:0 auto;
+    }
+  }
 }
 
 .howItWorks {
@@ -69,6 +85,9 @@ aside {
   height:100%;
   margin: auto;
   padding: 6rem;
+  @media (max-width: $cross2) {
+    padding: 0.5rem;
+  }
 }
 
 .centered {
