@@ -21,7 +21,6 @@
 }
 
 html {
-  overflow-y: scroll;
   height: 100%;
   scroll-behavior: smooth;
 }
@@ -41,14 +40,30 @@ body {
   margin: 0;
 }
 
+main {
+  margin-block-start: $headHeight;
+  margin-block-end: $footHeight;
+}
+
 div#scroller {
+  scroll-snap-type: y proximity;
+  height: calc(100vh - #{$headHeight + $footHeight});
+
+}
+
+div#freeScroller {
+  overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  height: calc(100vh - #{$headHeight + $footHeight});
+  scroll-behavior: smooth;
 }
 
 @-moz-document url-prefix() {
   div#scroller {
     overflow-y: scroll;
-    height: calc(100vh - #{$headHeight});
+    scroll-snap-type: y mandatory;
+    height: calc(100vh - #{$headHeight + $footHeight});
+    scroll-behavior: smooth;
   }
 }
 
@@ -61,7 +76,7 @@ article {
   font-style: normal;
   font-weight: normal;
   color: #2E3532;
-  scroll-snap-align: end;
+  scroll-snap-align: start;
   padding-top: 1rem;
   padding-bottom: 1rem;
   @-moz-document url-prefix() {
@@ -87,9 +102,15 @@ article {
     padding-bottom: 6rem;
   }
 }
-
+article:first-of-type {
+  margin-top: 0;
+}
 article:last-of-type {
   margin-bottom: $footHeight;
+  @-moz-document url-prefix() {
+    margin-bottom: 0;
+  }
+
 }
 
 footer {

@@ -2,8 +2,8 @@
 
 
 article {
-  height:auto;
   padding-top: 0.5rem;
+  scroll-snap-align: start end;
 }
 
 a {
@@ -64,7 +64,8 @@ a {
 }
 
 .noScroll {
-  height: auto;
+  height: calc(5.2 * calc(100vh - calc(#{$headHeight+$footHeight})));
+  overflow-y: auto;
 }
 
 
