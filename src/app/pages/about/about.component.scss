@@ -67,8 +67,8 @@ a {
 }
 
 .noScroll {
-  height: calc(5.2 * calc(100vh - calc(#{$headHeight+$footHeight})));
-  overflow-y: auto;
+  height: auto;
+  margin-bottom: 2rem;
 }
 
 

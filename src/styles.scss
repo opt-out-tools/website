@@ -61,6 +61,9 @@ div#freeScroller {
 div#regularScroller {
   overflow-y: scroll;
   height: calc(100vh - #{$headHeight + $footHeight});
+  article:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 @-moz-document url-prefix() {
@@ -167,4 +170,11 @@ button::-moz-focus-inner {
 
 .Ta\(c\) {
   text-align: center;
+}
+
+.centered {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
