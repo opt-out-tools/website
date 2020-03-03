@@ -2,9 +2,9 @@
 
 .carousel-wrapper {
   position: relative;
-  height: 400px;
   overflow: hidden;
-  width: 640px;
+  height: 25rem;
+  width: 40rem;
   margin: 0 auto;
   //border-radius: 10px;
   //box-shadow: 3px 15px 30px -8px #9e9eab;
@@ -12,6 +12,10 @@
   flex: 1;
   box-shadow: 3px 13.8611px 10px #DADADA;
   border-radius: 8.31667px;
+  @media (max-width: 1024px) {
+    height: 25rem;
+    width: 30rem;
+  }
 }
 
 

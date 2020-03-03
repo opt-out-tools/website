@@ -21,8 +21,11 @@
 }
 
 html {
-  height: 100%;
+  width: 100%;
   scroll-behavior: smooth;
+  @media (max-width: 1024px) {
+    font-size: 8px;
+  }
 }
 
 
@@ -36,7 +39,7 @@ textarea {
 
 body {
   //background: linear-gradient(0deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.76)), url('/assets/img/OptOutLogo-04.svg') repeat-y bottom right;
-  background-size: contain;
+  //background-size: contain;
   margin: 0;
 }
 
@@ -91,7 +94,9 @@ article {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
-
+  @media (max-width: 1024px) {
+    margin: $headHeight calc(#{$margin} / 5) calc(#{$headHeight+$footHeight});
+  }
   @media (min-width: 1440px) {
     margin: $headHeight calc(#{$margin} * 2) calc(#{$headHeight+$footHeight});
     padding-top: 2rem;
@@ -178,3 +183,4 @@ button::-moz-focus-inner {
   justify-content: center;
   flex-direction: column;
 }
+

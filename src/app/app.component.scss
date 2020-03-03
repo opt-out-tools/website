@@ -47,21 +47,27 @@
     color: #0B3954;
     background-color: transparent;
     cursor: pointer;
+    @media (max-width: 1024px) {
+      padding:0 0.5rem;
+    }
   }
 }
 
 .nav-donate-btn {
   display: flex;
-  width: 120px;
-  height: 40px;
-  margin: 0 20px;
+  width: 7.5rem;
+  height: 2.5rem;
+  margin: 0 1.25rem;
   justify-content: center;
   align-items: center;
   border: 2px solid $secondary;
-  border-radius: 20px;
+  border-radius: 1.25rem;
   a {
     color: $secondary;
     text-decoration: none;
+  }
+  @media (max-width: 1024px) {
+    width: 4rem;
   }
 }
 
@@ -74,8 +80,12 @@
 }
 
 .logo {
-  height:48px;
-  padding: 4px 16px 0;
+  height: 3rem;
+  padding: 0.25rem 1rem 0;
+  @media (max-width: 1024px) {
+    height: 1.5rem;
+    padding: 0.25rem 0.75rem 0;
+  }
 }
 
 
