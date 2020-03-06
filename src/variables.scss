@@ -1,14 +1,15 @@
+$phone1: 320px;
+$phone2: 360px;
+$phone3: 375px;
+$phone4: 414px;
+$phone5: 480px;
+$phone6: 640px;
+$tablet2: 768px;
+$tablet3: 850px;
 $desktop1: 1024px;
 $desktop2: 1440px;
 $desktop3: 1920px;
 $desktop4: 2560px;
-$phone1: 320px;
-$phone2: 360px;
-$phone3: 375px;
-$phone4: 480px;
-$phone5: 640px;
-$tablet1: 768px;
-$tablet2: 850px;
 
 $primary: #10CFC9;
 $secondary: #6C1782;
@@ -18,8 +19,10 @@ $white: #FFFFFF;
 $headHeight: 5rem;
 $margin: 5rem;
 $footHeight: 5rem;
-$margin: 5rem;
 $textBlack: #222222;
 $textGray1: #73738d;
 $textGray2: #4f4f4f;
 
+@media (max-width: $phone6) {
+  $headHeight: 2rem;
+}

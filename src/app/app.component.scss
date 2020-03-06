@@ -14,13 +14,17 @@
   grid-template-columns: 75% 25%;
   background-color: $white;
   border-bottom: 1px solid $gray;
-  @media (max-width: $tablet2) {
+  @media (max-width: $tablet3) {
     grid-template-columns: 65% 35%;
   }
 }
 
 .main-nav {
   display: flex;
+
+
+
+
   ul {
     margin: 0;
     padding: 0;
@@ -51,7 +55,7 @@
     color: #0B3954;
     background-color: transparent;
     cursor: pointer;
-    @media (max-width: $tablet2) {
+    @media (max-width: $tablet3) {
       padding:0 0.5rem;
     }
   }
@@ -70,7 +74,7 @@
     color: $secondary;
     text-decoration: none;
   }
-  @media (max-width: $tablet2) {
+  @media (max-width: $tablet3) {
     width: 6rem;
     margin: 0 0.5rem;
   }
@@ -87,7 +91,7 @@
 .logo {
   height: 3rem;
   padding: 0.25rem 1rem 0;
-  @media (max-width: $tablet2) {
+  @media (max-width: $tablet3) {
     height: 1.5rem;
     padding: 0.25rem 0.75rem 0;
   }

@@ -22,7 +22,7 @@
   margin-left: 4%;
   margin-right: auto;
   overflow: hidden;
-  @media (max-width: $tablet2) {
+  @media (max-width: $tablet3) {
     width: 45%;
   }
 
@@ -33,7 +33,7 @@
   margin-left: auto;
   margin-right: 4%;
   overflow: hidden;
-  @media (max-width: $tablet2) {
+  @media (max-width: $tablet3) {
     width: 45%;
   }
 }
@@ -69,7 +69,7 @@ aside {
     object-fit: contain;
     overflow:hidden;
   }
-  @media (max-width: $tablet2) {
+  @media (max-width: $tablet3) {
     padding: 0.5rem 0.5rem;
     img {
       width: 30%;
@@ -85,7 +85,7 @@ aside {
   height:100%;
   margin: auto;
   padding: 6rem;
-  @media (max-width: $tablet2) {
+  @media (max-width: $tablet3) {
     padding: 0.5rem;
   }
 }
