@@ -44,7 +44,7 @@
     margin-block-start: 1.2rem;
     line-height: 0.9rem;
   }
-  @media screen and (max-width: $cross2) and (orientation: landscape) {
+  @media screen and (max-width: $tablet2) and (orientation: landscape) {
     padding-top: 0.1rem;
     h2 {
       margin-block-start: 0.2rem;
@@ -103,7 +103,7 @@ a {
 }
 
 .nextLabeling {
-  @media screen and (max-width: $cross2) and (orientation: landscape) {
+  @media screen and (max-width: $tablet2) and (orientation: landscape) {
     h2 {
       margin-block-start: 0.3rem;
     }

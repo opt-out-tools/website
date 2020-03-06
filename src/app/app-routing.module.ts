@@ -7,7 +7,6 @@ import {ResearchComponent} from './pages/research/research.component';
 import {TechComponent} from './pages/tech/tech.component';
 import {FaqComponent} from './pages/faq/faq.component';
 import {TakeActionComponent} from './pages/take-action/take-action.component';
-import {BlogComponent} from './pages/blog/blog.component';
 import {RedirectGuardService} from './services/redirect-guard.service';
 
 const routes: Routes = [
@@ -72,6 +71,7 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, {
     scrollOffset: [0, 0], scrollPositionRestoration: 'top'
   })],
+  providers: [RedirectGuardService],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
