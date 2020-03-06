@@ -23,8 +23,17 @@
 html {
   width: 100%;
   scroll-behavior: smooth;
-  @media (max-width: $cross2) {
+  @media only screen and (max-width: $mob1) and (orientation: landscape){
     font-size: 8px;
+  }
+  @media only screen and (max-width: $mob5) and (orientation: landscape){
+    font-size: 8px;
+  }
+  @media (max-width: $cross1) {
+    font-size: 13px;
+  }
+  @media (max-width: $desk1) {
+    font-size: 14px;
   }
   user-select: text;
 }

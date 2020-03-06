@@ -43,7 +43,7 @@ type Orientation = ( 'prev' | 'next' | 'none' );
 export class CarouselComponent implements AfterViewInit, OnDestroy {
 
   carouselWrapperStyle = {};
-  private currentSlide = 0;
+  public currentSlide = 0;
   private changeDetectorRef: ChangeDetectorRef;
   public orientation: Orientation;
   subscription: Subscription;

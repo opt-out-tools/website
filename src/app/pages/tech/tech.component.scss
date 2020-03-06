@@ -41,8 +41,8 @@
     text-align: center;
   }
   & > .footnote {
-    margin-block-start: 0.5rem;
-    line-height: 0.8rem;
+    margin-block-start: 1.2rem;
+    line-height: 0.9rem;
   }
   @media screen and (max-width: $cross2) and (orientation: landscape) {
     padding-top: 0.1rem;
