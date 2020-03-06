@@ -1,36 +1,51 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<hr />
-<nav class="main-nav" *ngIf="routerUrl !== '/report'">
-  <ul id="headButtons">
-    <li class="dropdown">
-      <a routerLink="/"><img class="icon" src="../assets/img/OptOutLogo-04.png" alt=""/></a>
-    </li>
-    <li class="dropdown">
-      <button routerLink="/about" class="dropbtn" >About</button>
-    </li>
-    <li class="dropdown">
-      <button routerLink="/work" class="dropbtn" >Work</button>
-    </li>
-  </ul>
-  <ul id="headLinks">
-    <li class="dropdown">
-      <a href="https://twitter.com/optoutsocial"><img class="icon" src="../assets/img/nav_icons/twitter-black-shape.png" alt="twitter_icon"/></a>
-    </li>
-    <li class="dropdown">
-      <a href="https://github.com/orgs/opt-out-tools"><img class="icon" src="../assets/img/nav_icons/github-logo.png" alt="github_icon"/></a>
-    </li>
-    <li class="dropdown">
-      <a href="mailto:optoutsocialmedia@gmail.com"><img class="icon" src="../assets/img/nav_icons/gmail.png" alt="gmail_icon"/></a>
-    </li>
-    <li class="dropdown">
-      <a routerLink="/"><img class="icon" src="../assets/img/nav_icons/slack-symbol.png" alt="slack_icon"/></a>
-    </li>
-  </ul>
+<header class="header">
+  <nav class="main-nav" *ngIf="routerUrl !== '/report'">
+    <ul id="headButtons">
+      <li class="dropdown">
+        <a routerLink="/"><img class="logo" src="assets/img/OptOutToolsLogo-01.svg" alt=""/></a>
+      </li>
+      <li class="dropdown">
+        <button routerLink="/about" class="dropbtn" >About us</button>
+      </li>
+      <li class="dropdown">
+        <button routerLink="/tech" class="dropbtn" >Tech</button>
+      </li>
+      <li class="dropdown">
+        <button routerLink="/research" class="dropbtn" >Research</button>
+      </li>
+      <li class="dropdown">
+        <button routerLink="/blog" class="dropbtn" >Blog</button>
+      </li>
+      <li class="dropdown">
+        <button routerLink="/faq" class="dropbtn" >FAQ</button>
+      </li>
+      <li class="dropdown">
+        <button routerLink="/takeAction" class="dropbtn" >Take action</button>
+      </li>
+    </ul>
+  </nav>
+  <div class="nav-donate-btn">
+    <a href="https://opencollective.com/opt-out-tools">Donate</a>
+  </div>
+</header>
 
-</nav>
 
 <main>
   <router-outlet></router-outlet>
 </main>
+
 <ng2-slim-loading-bar color="darkblue" height="5px"></ng2-slim-loading-bar>
-<footer *ngIf="routerUrl !== '/report'"></footer>
+<footer *ngIf="routerUrl !== '/report'"  class="footer">
+  <h3>Opt Out Tools</h3>
+  <ul class="footer-links">
+    <li class="footer-link">
+      <a routerLink="twitter"><img class="icon" src="../assets/img/nav_icons/twitter-black-shape.png" alt="twitter_icon"/></a>
+    </li>
+    <li class="footer-link">
+      <a href="https://github.com/orgs/opt-out-tools"><img class="icon" src="../assets/img/nav_icons/github-logo.png" alt="github_icon"/></a>
+    </li>
+    <li class="footer-link">
+      <a href="mailto:optoutsocialmedia@gmail.com"><img class="icon" src="../assets/img/nav_icons/gmail.png" alt="gmail_icon"/></a>
+    </li>
+  </ul>
+</footer>

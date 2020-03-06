@@ -1,0 +1,23 @@
+@import "../../../variables.scss";
+
+a {
+  color: $primary;
+  text-decoration: none;
+}
+
+h4 {
+  margin-block-end: 0.5rem;
+}
+
+p {
+  margin-block-start: 0.5rem;
+}
+
+.contribute {
+  @media screen and (max-width: $tablet3) and (orientation: landscape) {
+    h2, h3, h4 {
+      margin-block-start: 0.5rem;
+      margin-block-end: 0.5rem;
+    }
+  }
+}
