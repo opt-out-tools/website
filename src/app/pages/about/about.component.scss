@@ -1,86 +1,90 @@
-.parent {
-  height: 100vh;
-  scroll-snap-type: y mandatory;
+@import "../../../variables.scss";
+
+
+article {
+  padding-top: 0.5rem;
+  scroll-snap-align: center;
 }
 
-@-moz-document url-prefix() {
-  .parent {
-    overflow-y: scroll;
+a {
+  color: $primary;
+}
+
+.values {
+  display: flex;
+  list-style: none;
+  padding-inline-start: 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  li {
+    line-height: 1.5;
+    padding-left: 1em;
+    text-indent: -.7em;
+    width: 30%;
+    h2 {
+      margin-block-end: 0;
+      text-indent: -1em;
+    }
+    h2::before {
+      content: "•";
+      color: $primary;
+      margin-right: 1rem;
+      font-size: 1.5rem;
+    }
+    h2.purple::before {
+      color: $secondary;
+    }
   }
 }
 
-.child {
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.logoWrapper {
+  width: 50%;
+}
+
+.support_logo1 {
+  width: 100%;
+}
+.support_logo2 {
+  width: 100%;
+}
+
+.portrait {
+  display:flex;
+  text-align: left;
+  justify-content: space-between;
+  scroll-snap-align: start;
+  .portrait_pic {
+    position: relative;
+    object-fit: contain;
+    max-width:1200px;
+    max-height:1600px;
+    width: 25%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+  aside {
+    width:73%;
+  }
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.noScroll {
+  height: auto;
+  scroll-snap-align: start;
+}
+
+.snap {
   scroll-snap-align: end;
 }
 
-.about-us-page {
-  height:calc(100vh - 100px);
-  padding: 100px 50px 0;
-  font-family: 'Helvetica', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  color: #2E3532;
-}
 
-h1 {
-  font-size: 24px;
-  line-height: 40px;
-  font-weight: 600;
-}
 
-.about-text {
-  padding: 0 15px 20px;
-}
 
-.about-columns {
-  display: flex;
-  padding-bottom: 0;
-  justify-content: space-between;
-}
-
-.column {
-  flex-basis: 24%;
-  min-width:160px;
-  text-align: center;
-  h4 {
-    margin: 0;
-    padding-top: 5px;
-  }
-  p {
-    margin: 0;
-    padding-top: 5px;
-    font-size: 14px;
-    text-align: left;
-  }
-  img {
-    height: 70px;
-    padding: 20px 0;
-  }
-}
-
-.about-vision, .about-mission {
-  max-width: 38%;
-  margin: 0;
-  text-transform: uppercase;
-  h3 {
-    margin: 0;
-    padding-top: 20px;
-  }
-  p {
-    margin: 0 0 5px;
-  }
-}
-
-.about-vision {
-  text-align: left;
-}
-.about-mission {
-  text-align: right;
-}
-
-.border-left {
-  border-left: 2px solid black;
-}
-.border-right {
-  border-right: 2px solid black;
-}

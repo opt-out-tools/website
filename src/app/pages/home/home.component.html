@@ -1,18 +1,86 @@
-<div id="home">
-  <img src="../../../assets/img/OptOutLogo-01.svg" alt="" />
-  <div id="home-text">
-    <h1>50% TECH, 50% ACTIVISM.</h1>
-    <p>We believe that woman should have <strong>equal access</strong> to digital spaces.</p>
-    <p>We are building to keep ourselves safer on social media.<br />
-      We are starting <strong>conversations</strong> about <strong>women's rights</strong> online.<br />
-      We are tired of online misogyny.</p>
-    <p>It's time to <strong>Opt Out</strong>.</p>
-  </div>
-  <div id="button-holder">
-    <button id="report_button" routerLink="/report" >
-      Submit a report
-    </button>
-  </div>
+<div appScroller id="scroller">
+
+  <article class="intro centered">
+    <h1 class="intro-h1">
+      Tired of harassment on Twitter?
+    </h1>
+    <p>
+      At Opt Out Tools, we've built a browser extension for Firefox that works like an ad blocker, but hides misogyny
+      instead of adverts from your feed.
+    </p>
+    <button routerLink="extension" class="button-primary">Get the alpha version!</button>
+  </article>
+
+  <article class="centered">
+    <img class="howItWorks" src="assets/gifs/ezgif.com-optimize.gif"  alt="404 image"/>
+  </article>
+
+  <article class="centered">
+    <section class="column-single-right">
+      <h2>We've built a feminist machine learning model</h2>
+      <p>It uses latest trends in machine learning to spot abusive misogynistic comments.</p>
+    </section>
+    <section class="column-single-left">
+      <aside>Coming Soon</aside>
+      <h2>We focus on consent, not censorship</h2>
+      <p>
+        People see and experience online harassment and misogyny differently based on their background and
+        circumstances. We're designing our browser extension so that you can give feedback and tailor it to your
+        personal online experience.</p>
+    </section>
+    <section class="column-single-right">
+      <aside>Coming Soon</aside>
+      <h2>Your safety is top priority</h2>
+      <p>
+        We are researching how our browser extension can aid the reporting of misogynistic comments to Twitter so the
+        moderators of the platform can analyze the detected abuse.</p>
+    </section>
+  </article>
+
+  <article class="centered">
+    <h1>Why do we need to exists?</h1>
+    <app-carousel></app-carousel>
+  </article>
+
+  <article>
+    <h1>We're not just tech</h1>
+    <div class="columns">
+      <section class="column-third">
+        <img src="assets/img/about/empowerment.png" alt="empowerment"/>
+        <h2>Research</h2>
+        <p>
+          Our tech is here to solve real-world problems. It is vital to us that we compile and understand the latest research
+          around online harassment and misogyny to inform our technical decisions. Check out our online resources <a
+          routerLink="/research">here</a>.
+        </p>
+      </section>
+      <section class="column-third">
+        <img src="assets/img/about/feminist.png" alt="empowerment"/>
+        <h2>Activism</h2>
+        <p>
+          We facilitate workshops with folks affected by online misogyny, allies, and tech communities. Let's meet, share
+          experiences and tackle misogynistic harassment together.
+        </p>
+      </section>
+      <section class="column-third">
+        <img src="assets/img/about/fist.png" alt="empowerment"/>
+        <h2>Take Action</h2>
+        <p>
+          We need your help! <br/>
+          Online misogyny is an going global tragedy. We need your help fighting it. Want to get involved? Click <a
+          routerLink="/takeAction">here</a> to learn how.
+        </p>
+      </section>
+    </div>
+  </article>
+
+  <article class="Ta(c) centered">
+    <div>
+      <button routerLink="/donate" class="button-primary">Donate</button>
+      <h1>We won't let hate win!</h1>
+    </div>
+  </article>
+
 </div>
 
 
