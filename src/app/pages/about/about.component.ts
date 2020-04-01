@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-about',
@@ -6,9 +6,7 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
-  @ViewChild('about1', {read: ElementRef, static: false}) about1: ElementRef;
-  @ViewChild('about2', {read: ElementRef, static: false}) about2: ElementRef;
-  @ViewChild('about3', {read: ElementRef, static: false}) about3: ElementRef;
-
-
+  @ViewChild('about1', { read: ElementRef }) about1: ElementRef;
+  @ViewChild('about2', { read: ElementRef }) about2: ElementRef;
+  @ViewChild('about3', { read: ElementRef }) about3: ElementRef;
 }

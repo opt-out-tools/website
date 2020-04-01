@@ -1,10 +1,9 @@
 import {Component, NgModule} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { HttpClientModule, HttpClientXsrfModule } from '@angular/common/http';
+import { HttpClientXsrfModule } from '@angular/common/http';
 
-@Injectable()
-@Component({
+
+/*@Component({
   selector: 'app-report',
   templateUrl: './report.component.html',
   styleUrls: ['./report.component.css']
@@ -15,7 +14,7 @@ import { HttpClientModule, HttpClientXsrfModule } from '@angular/common/http';
     cookieName: 'csrftoken',
     headerName: 'X-CSRFToken'
   })]
-})
+})*/
 export class ReportComponent {
 
   private headers = new HttpHeaders({'Content-Type': 'application/json',
