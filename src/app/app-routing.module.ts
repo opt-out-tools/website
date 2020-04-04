@@ -27,7 +27,7 @@ const routes: Routes = [
     canActivate: [RedirectGuardService],
     component: RedirectGuardService,
     data: {
-      externalUrl: 'https://addons.mozilla.org/en-US/firefox/addon/opt-out-tools/?src=search'
+      externalUrl: 'https://addons.mozilla.org/en-US/firefox/addon/opt-out-tools/'
     }
   },
   {
@@ -51,7 +51,7 @@ const routes: Routes = [
     canActivate: [RedirectGuardService],
     component: RedirectGuardService,
     data: {
-      externalUrl: 'https://github.com/opt-out-tools/start-here'
+      externalUrl: 'https://github.com/opt-out-tools/'
     }
   },
   { path: 'faq', component: FaqComponent },
